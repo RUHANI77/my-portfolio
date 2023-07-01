@@ -40,13 +40,73 @@
 
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Education</p>
-                        <p class="tab-links">Problem Solving</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('problem-solving')">Problem Solving</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Skills</span> <br>C, C++, Python, JavaScript</li>
+                            <li><span>Web Technologies</span> <br>HTML, CSS(Bootstrap, Tailwind), ReactJS</li>
+                            <li><span>Database Management</span> <br>MySQL</li>
+                            <li><span>Version Control</span> <br>Git, GitHub.
+                            </li>
+                            <li><span>Office Tools</span> <br>MS Office, Google Forms, Sites, Docs, Slide.
+                            </li>
+                            <li><span>Operating System</span> <br>Windows, Linux</li>
+                            <li><span>Data stucture & Algorithms</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>05/2019 - Present
+                            </span><br>B.Sc. in Computer Science and Engineering <br> 
+                            Daffodil International University (DIU)<br>
+                            CGPA: 3.81 out of 4
+                            </li>
+                            <li><span> 2017 - 2018</span><br>H.S.C in Science Division
+                             <br>Govt. Bangabandhu College, Gopalganj 
+                            <br>GPA: 4.85</li>
+                            <li><span>2016</span><br>S.S.C in Science Division
+                            <br>Binapani Govt. Girls High School, Gopalganj
+                            <br>GPA: 5.00</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="problem-solving">
+                        <ul>
+                            <li><span>Codeforces: </span>500+</li>
+                            <li><span>beecrowd: </span>200+</li>
+                            <li><span>UVA: </span>100+</li>
+                            <li><span>LightOJ: </span>30+</li>
+                            <li><span>Others: </span>30+</li>
+                            <li>Solved 850+ problems on online judges and participated 30+ various online &
+                             onsite programming contests</li>
+                             
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- ----------------Services-------------- -->
+<div>
+    
+</div>
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
 </body>
 </html>
